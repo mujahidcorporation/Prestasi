@@ -21,10 +21,13 @@
     alt="Logo"
     class="logo">
 
-  <h2>PRESTASI SDIT DAARUL HASANAH</h2>
+  <h2>KEAMANAN SDIT DAARUL HASANAH</h2>
   
     <button onclick="showMenu('prestasisiswa')">
       PRESTASI SISWA
+    </button>
+    <button onclick="showMenu('prestasiguru')">
+      PRESTASI GURU
     </button>
   
 </div>
@@ -50,8 +53,6 @@
   <input type="text" name="tingkat_perlombaan" placeholder="Tingkat Perlombaan" required>
   <input type="text" name="juara" placeholder="Juara" required>
   <input type="number" name="tahun_kejuaraan" placeholder="Tahun Kejuaraan" required>
-  <input type="text" name="bukti_pendukung" placeholder="Link Bukti Pendukung">
-    
   <button type="submit">Simpan</button>
 
 </form>
@@ -87,7 +88,56 @@
   </iframe>
 
 </div>
+  <!-- PRESTASI SISWA -->
+<div id="prestasiguru" class="menu">
+  <h2>Prestasi Guru</h2>
+
+  <!-- FORM INPUT PRESTASI GURU-->
+  <form 
+  action="https://script.google.com/macros/s/AKfycbwrZEZZmm32icyOj7-c9-UXvSRPUJocDC8Il0c2IdIBbXgOF_-ZX-RPUnVGsqTD1M4/exec" 
+  method="POST" 
+  target="_blank"
+>
+
+<input type="text" name="nama_guru" placeholder="Nama Guru" required>
+<input type="text" name="prestasi" placeholder="Prestasi Yang Diraih" required>
+<input type="number" name="tahun" placeholder="Tahun" required>
+<input type="text" name="bukti_pendukung" placeholder="Link Bukti Pendukung">
+<button type="submit">Simpan</button>
+
+</form>
+  <hr>
+
+  <!-- SEARCH DATA -->
+  <h3>Data Prestasi Siswa</h3>
+  <input 
+    type="text" 
+    id="searchIzinKeluar" 
+    placeholder="Cari surat izin keluar..." 
+    class="search-box" 
+    onkeyup="searchTable('searchIzinKeluar','frameIzinKeluar')"
+  >
+
+  <!-- TOMBOL EDIT / DOWNLOAD -->
+  <a href="https://docs.google.com/spreadsheets/d/1irzkzsyxceWV1hq1zrNqCZUUaeR0yRcVw39B8A9vdlI/edit"
+      target="_blank" class="admin-btn">
+      Edit Data Spreadsheet
+    </a>
   
+  <a href="https://docs.google.com/spreadsheets/d/1irzkzsyxceWV1hq1zrNqCZUUaeR0yRcVw39B8A9vdlI/export?format=xlsx" 
+     target="_blank" 
+     class="download-btn">
+    Download Excel
+  </a>
+
+  <!-- IFRAME DATA -->
+  <iframe 
+    id="frameIzinKeluar" 
+    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSopoboSNqsUcZln0POzPPpkdDUqCoxSCqj2HNw8FQvJMatapbXegL511ckW8xGWkH5X5bHrgZ6jyYT/pubhtml?gid=0&single=true" 
+    class="frame">
+  </iframe>
+
+</div>
 
 </div>
 
